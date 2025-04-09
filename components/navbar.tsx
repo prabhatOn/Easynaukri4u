@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Moon, Sun, Menu, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -43,6 +44,14 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="EasyNaukri4U Logo"
+              width={45}
+              height={45}
+              className="object-contain hover:opacity-90 transition-opacity"
+              priority
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               EasyNaukri4U
             </span>

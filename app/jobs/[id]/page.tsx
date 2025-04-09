@@ -19,7 +19,7 @@ import {
 export default function JobDetailsPage({ params }: { params: { id: string } }) {
   // Find job by ID
   const jobId = params.id
-  const job = jobListings.find((job) => job.id === jobId) || {
+  const job = [...jobListings, ...sarkariJobs].find((job) => job.id === jobId) || {
     id: "not-found",
     title: "Job Not Found",
     company: "Unknown",
@@ -32,7 +32,7 @@ export default function JobDetailsPage({ params }: { params: { id: string } }) {
   }
 
   // Find similar jobs (excluding current job)
-  const similarJobs = jobListings.filter((item) => item.id !== jobId).slice(0, 3)
+  const similarJobs = [...jobListings, ...sarkariJobs].filter((item) => item.id !== jobId).slice(0, 3)
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -304,6 +304,43 @@ const jobListings = [
     salary: "₹14-22 LPA",
     description:
       "Join our DevOps team to build and maintain our cloud infrastructure. You will automate deployment processes, optimize system performance, and ensure high availability of our services.",
+  },
+]
+
+// Sample sarkari jobs data
+const sarkariJobs = [
+  {
+    id: "sarkari-1",
+    title: "Assistant Section Officer",
+    company: "Union Public Service Commission (UPSC)",
+    location: "Delhi, India",
+    experience: "3-5 years",
+    type: "Full-time",
+    posted: "Posted 2 days ago",
+    salary: "₹35,400 - ₹1,12,400",
+    description: "The Union Public Service Commission (UPSC) is recruiting for the position of Assistant Section Officer. This role involves administrative and clerical work in various government departments.",
+  },
+  {
+    id: "sarkari-2",
+    title: "Junior Engineer (Civil)",
+    company: "Public Works Department (PWD)",
+    location: "Mumbai, India",
+    experience: "2-4 years",
+    type: "Full-time",
+    posted: "Posted 3 days ago",
+    salary: "₹35,400 - ₹1,12,400",
+    description: "The Public Works Department is seeking qualified Junior Engineers for civil engineering projects. This position involves supervising construction work, preparing estimates, and ensuring quality standards.",
+  },
+  {
+    id: "sarkari-3",
+    title: "Data Entry Operator",
+    company: "Staff Selection Commission (SSC)",
+    location: "Remote",
+    experience: "4-6 years",
+    type: "Contract",
+    posted: "Posted 1 day ago",
+    salary: "₹25,500 - ₹81,100",
+    description: "The Staff Selection Commission is hiring Data Entry Operators for various government departments. This role involves entering and managing data in government databases and systems.",
   },
 ]
 

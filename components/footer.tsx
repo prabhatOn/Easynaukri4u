@@ -91,14 +91,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact Info</h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">prathiba tower </span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
-              </li>
+             
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-primary" />
                 <span className="text-muted-foreground">EasyNaurkri4U.com</span>

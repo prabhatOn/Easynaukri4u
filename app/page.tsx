@@ -172,7 +172,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter>
                     <Button variant="outline" className="w-full" asChild>
-                      <Link href={`/jobs/sarkari`}>View Details</Link>
+                      <Link href={`/jobs/${job.id}`}>View Details</Link>
                     </Button>
                   </CardFooter>
                 </Card>
@@ -329,7 +329,7 @@ export default function Home() {
 // Sample Data
 const sarkariJobs = [
   {
-    id: "1",
+    id: "sarkari-1",
     title: "Assistant Section Officer",
     company: "Union Public Service Commission (UPSC)",
     location: "Delhi, India",
@@ -338,7 +338,7 @@ const sarkariJobs = [
     posted: "Posted 2 days ago",
   },
   {
-    id: "2",
+    id: "sarkari-2",
     title: "Junior Engineer (Civil)",
     company: "Public Works Department (PWD)",
     location: "Mumbai, India",
@@ -347,7 +347,7 @@ const sarkariJobs = [
     posted: "Posted 3 days ago",
   },
   {
-    id: "3",
+    id: "sarkari-3",
     title: "Data Entry Operator",
     company: "Staff Selection Commission (SSC)",
     location: "Remote",
