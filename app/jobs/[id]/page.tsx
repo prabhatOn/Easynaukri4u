@@ -94,7 +94,9 @@ export default function JobDetailsPage({ params }: { params: { id: string } }) {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button className="flex-1">Apply Now</Button>
+                  <a href="../../login" target="_blank" rel="noopener noreferrer">
+                    <Button className="flex-1">Apply Now</Button>
+                  </a>
                   <Button variant="outline" className="flex items-center gap-2">
                     <Share2 className="h-4 w-4" />
                     Share Job
