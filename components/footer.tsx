@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
@@ -7,7 +8,15 @@ export default function Footer() {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">EasyNaukri4U</h3>
+            <div className="mb-4">
+              <Image
+                src="/logo.png"
+                alt="EasyNaukri4U Logo"
+                width={150}
+                height={40}
+                className="h-10 w-auto"
+              />
+            </div>
             <p className="text-muted-foreground mb-4">
               Your one-stop platform for finding the perfect job and preparing for your career journey.
             </p>
